@@ -33,9 +33,31 @@
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 
+<style>
+	.body {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	#id {
+		width: 60%;
+		margin: 0 auto;
+	}
+
+	h1 {
+		margin: 20px auto 40px;
+	}
+</style>
+
 <body>
-<!-- Use it like any other HTML element -->
-<model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="./assets/glb/source/Allosaurus.glb" ar ar-modes="webxr scene-viewer quick-look" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+	<div class="body">
+		<h1>Test app for VRT</h1>
+		<p>Нажмите на кнопку в углу превью модели, далее выберите локацию для размещения модели</p>
+
+		<!-- Use it like any other HTML element  ar-modes="webxr scene-viewer quick-look" -->
+		<model-viewer id="model-test" alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National 	Air and Space Museum" src="./assets/glb/source/Allosaurus.glb" ar camera-controls></model-viewer>
+	</div>
 </body>
 
 </html>
